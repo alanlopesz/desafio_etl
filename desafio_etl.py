@@ -36,5 +36,6 @@ tabela_ativa = tabela_open.active
 for c, des in copia_tabela.items():
     img = openpyxl.drawing.image.Image('image_{}.jpg'.format(c))
     img.height = 100
+    img.width = 100
     tabela_ativa.add_image(img, f"B{c+2}")
 tabela_open.save("tabela_final.xlsx")
